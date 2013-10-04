@@ -1,0 +1,21 @@
+set nocompatible
+set sw=4
+set et
+set ts=4
+set autoindent
+set smartindent
+syntax on
+set backspace=2
+set ruler
+set mouse=a
+"easy split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
+
+"numbering
+set number
