@@ -19,3 +19,8 @@ au BufWritePost .vimrc so ~/.vimrc
 
 "numbering
 set number
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+"allow larger yanks
+set viminfo='1000,<1000,s10,h
