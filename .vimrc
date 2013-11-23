@@ -24,3 +24,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "allow larger yanks
 set viminfo='1000,<1000,s10,h
+
+"auto save/load folds
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
