@@ -28,3 +28,19 @@ set viminfo='1000,<1000,s10,h
 "auto save/load folds
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
+set pastetoggle=<F2>
+set clipboard=unnamed
+
+vnoremap < <gv
+vnoremap > >gv
+
+map Y y$
+
+imap <up> <c-o>gk
+imap <down> <c-o>gj
+
+"get block cursor
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
