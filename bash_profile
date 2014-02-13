@@ -20,12 +20,13 @@ if [ -d "${HOME}/info" ]; then
   INFOPATH="${HOME}/info:${INFOPATH}"
 fi
 
+USERNAME=""
 PATH=".:${PATH}"
 
 #specific computer
 specific=firefly
 # cygwin pacific
-if [ $specific = "firefly" ]
+if [ ${specific} = "firefly" ]
 then
     PATH="/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64:${PATH}"
     export DESKTOP=/cygdrive/c/Users/KT/Desktop
@@ -33,4 +34,12 @@ then
     startxwin
     DISPLAY=localhost:0.0
     export DISPLAY
+else if [ ${specific} = "isu" ]
+then
+    #source ~/etc/profile.d/nx.sh
+    #source ./Xilinx_Env_1
+    source ./Xilinx_Env_2
+    source ./cny_Env
 fi
+
+export USERNAME BASH_ENV PATH DISPLAY
