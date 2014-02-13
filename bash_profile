@@ -23,10 +23,13 @@ fi
 USERNAME=""
 PATH=".:${PATH}"
 
+C_INCLUDE_PATH="${HOME}/include:${C_INCLUDE_PATH}"
+CPLUS_INCLUDE_PATH="${HOME}/include:${CPLUS_INCLUDE_PATH}"
+
 #specific computer
-specific=firefly
+MACHINE_DESCRIPTION=$(head -1 MACHINE_DESCRIPTION)
 # cygwin pacific
-if [ ${specific} = "firefly" ]
+if [ ${MACHINE_DESCRIPTION} = "CYGWIN" ]
 then
     PATH="/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64:${PATH}"
     export DESKTOP=/cygdrive/c/Users/KT/Desktop
@@ -34,7 +37,7 @@ then
     startxwin
     DISPLAY=localhost:0.0
     export DISPLAY
-else if [ ${specific} = "isu" ]
+else if [ ${MACHINE_DESCRIPTION} = "LINUX_ISU" ]
 then
     #source ~/etc/profile.d/nx.sh
     #source ./Xilinx_Env_1
