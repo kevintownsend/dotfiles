@@ -43,6 +43,7 @@ then
     #source ./Xilinx_Env_1
     source ./Xilinx_Env_2
     source ./cny_Env
-fi
 
-export USERNAME BASH_ENV PATH DISPLAY
+fi; fi
+
+export USERNAME BASH_ENV PATH DISPLAY C_INCLUDE_PATH CPLUS_INCLUDE_PATH MACHINE_DESCRIPTION
