@@ -37,13 +37,16 @@ then
     startxwin
     DISPLAY=localhost:0.0
     export DISPLAY
-else if [ ${MACHINE_DESCRIPTION} = "LINUX_ISU" ]
+elif [ ${MACHINE_DESCRIPTION} = "LINUX_ISU" ]
 then
     #source ~/etc/profile.d/nx.sh
-    #source ./Xilinx_Env_1
+    source ./Xilinx_Env_1
     source ./Xilinx_Env_2
     source ./cny_Env
-
-fi; fi
+    CPLUS_INCLUDE_PATH="${HOME}/intel/include:${HOME}/intel/mkl/include:${CPLUS_INCLUDE_PATH}"
+    C_INCLUDE_PATH="${HOME}/intel/include:${HOME}/intel/mkl/include:${CPLUS_INCLUDE_PATH}"
+    LD_LIBRARY_PATH="${HOME}/intel/lib/intel64:${HOME}/intel/mkl/lib/intel64:${LD_LIBRARY_PATH}"
+    PATH="${HOME}/intel/bin:${PATH}"
+fi
 
 export USERNAME BASH_ENV PATH DISPLAY C_INCLUDE_PATH CPLUS_INCLUDE_PATH MACHINE_DESCRIPTION
