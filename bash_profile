@@ -20,6 +20,10 @@ if [ -d "${HOME}/info" ]; then
   INFOPATH="${HOME}/info:${INFOPATH}"
 fi
 
+if [ -d "${HOME}/lib" ]; then
+    LD_LIBRARY_PATH="${HOME}/lib:${LD_LIBRARY_PATH}"
+fi
+
 USERNAME=""
 PATH=".:${PATH}"
 
@@ -43,8 +47,8 @@ then
     source ./Xilinx_Env_1
     source ./Xilinx_Env_2
     source ./cny_Env
-    CPLUS_INCLUDE_PATH="${HOME}/intel/include:${HOME}/intel/mkl/include:${CPLUS_INCLUDE_PATH}"
-    C_INCLUDE_PATH="${HOME}/intel/include:${HOME}/intel/mkl/include:${CPLUS_INCLUDE_PATH}"
+    #CPLUS_INCLUDE_PATH="${HOME}/intel/include:${HOME}/intel/mkl/include:${CPLUS_INCLUDE_PATH}"
+    #C_INCLUDE_PATH="${HOME}/intel/include:${HOME}/intel/mkl/include:${CPLUS_INCLUDE_PATH}"
     LD_LIBRARY_PATH="${HOME}/intel/lib/intel64:${HOME}/intel/mkl/lib/intel64:${LD_LIBRARY_PATH}"
     PATH="${HOME}/intel/bin:${PATH}"
 fi
