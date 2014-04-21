@@ -48,3 +48,6 @@ let &t_te.="\e[0 q"
 
 "Clear search highlights
 "noremap <silent><Leader>/ :nohls<CR>
+
+"remapping esc
+imap <c-space> <Esc>
