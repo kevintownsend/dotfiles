@@ -16,9 +16,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+
 from html.parser import *
 from urllib.request import *
 from subprocess import *
+
 
 user_info = "user_config.py"
 
@@ -58,10 +61,19 @@ def _ReadDataImpl(filename):
         file_data = _PrepareFileData(file_lines)
         return eval(file_data, {}, {})
     except IOError as e:
-        raise error.InternalError('IO error happened while reading data from file '
+        raise IOError('IO error happened while reading data from file '
                               '"{0}" : {1}.\n'.format(filename, e))
 
-userInfo = _ReadDataImpl(user_info)
+try:
+    userInfo = _ReadDataImpl(user_info)
+except IOError:
+    print("""no user_config.py file
+Create a file called user_config.py with contents:
+{
+'username'  : '',
+'password'  : ''
+}
+""")
 username = userInfo['username']
 password = userInfo['password']
 if(username == ""):
