@@ -33,14 +33,15 @@ if [ -d "${HOME}/include" ]; then
 fi
 
 # cygwin pacific
-if [ $(uname) =~ "CYGWIN*" ]
+if [[ $(uname) =~ "CYGWIN*" ]]
 then
   PATH="/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64:${PATH}"
   startxwin
   DISPLAY=localhost:0.0
   export DISPLAY
-elif [ $(uname) =~ "LINUX" ]
+elif [[ $(uname) =~ "LINUX" ]]
 then
+    echo
 fi
 
 if [ $(hostname) = "*iastate*" ]
