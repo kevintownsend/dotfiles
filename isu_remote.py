@@ -133,8 +133,12 @@ for pair in serverLoadPairs:
         if(password == ""):
             call(["ssh", "-X", login])
         else:
-            call(["sshpass", "-p", password, "ssh", "-X", login])
-            pass
+            ret = call(["sshpass", "-p", password, "ssh", "-X", login])
+            if(ret == 6):
+                call(["ssh", "-X", login])
+            elif(ret == 5):
+                print("Incorrect password")
+
         break
     except KeyboardInterrupt:
         print("Trying next server")
