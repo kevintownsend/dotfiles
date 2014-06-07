@@ -33,20 +33,22 @@ if [ -d "${HOME}/include" ]; then
 fi
 
 # cygwin pacific
-if [[ $(uname) =~ "CYGWIN*" ]]
+echo "hi"
+if [[ $(uname) =~ CYGWIN ]]
 then
+    echo "hi"
   if [ -d "/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64" ]; then
     PATH="/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64:${PATH}"
   fi
   startxwin
   DISPLAY=localhost:0.0
   export DISPLAY
-elif [[ $(uname) =~ "LINUX" ]]
+elif [[ $(uname) =~ LINUX ]]
 then
     echo
 fi
 
-if [[ $(hostname) =~ "*iastate*" ]]
+if [[ $(hostname) =~ iastate ]]
 then
     #license
     export LM_LICENSE_FILE=1717@io.ece.iastate.edu:27006@io.ece.iastate.edu:6978@io.ece.iastate.edu:27001@io.ece.iastate.edu
