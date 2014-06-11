@@ -33,10 +33,8 @@ if [ -d "${HOME}/include" ]; then
 fi
 
 # cygwin pacific
-echo "hi"
 if [[ $(uname) =~ CYGWIN ]]
 then
-    echo "hi"
   if [ -d "/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64" ]; then
     PATH="/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64:${PATH}"
   fi
