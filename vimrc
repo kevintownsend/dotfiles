@@ -1,5 +1,9 @@
 "Kevin Townsend's personal vimrc file. This file is free to use, modify and distribute without charge. No warranty of any kind is provided with this file.
 set nocompatible
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 set sw=4
 set et
 set ts=4
