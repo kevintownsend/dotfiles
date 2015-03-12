@@ -124,6 +124,9 @@ parser.feed(feed)
 serverLoadPairs.sort()
 i = 0
 
+if(len(serverLoadPairs)==0):
+    pass
+
 for pair in serverLoadPairs:
     if(i == 3):
         break;

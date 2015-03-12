@@ -1,3 +1,4 @@
 BoldAsFont=no
-ForegroundColour=0,64,0
+ForegroundColour=0,0,0
 BackgroundColour=255,255,255
+FontHeight=8
