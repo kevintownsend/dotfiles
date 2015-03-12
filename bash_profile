@@ -52,9 +52,10 @@ then
     export LM_LICENSE_FILE=1717@io.ece.iastate.edu:27006@io.ece.iastate.edu:6978@io.ece.iastate.edu:27001@io.ece.iastate.edu
     #Xilinx setup
     #The below line can effect gcc. I am not sure of the details.
-    source /remote/Xilinx/14.6/settings64.sh
+    source /remote/Xilinx/14.7/settings64.sh
     export PATH=$PATH:/remote/Modelsim/10.1c/modeltech/linux_x86_64/
     export XIL_PAR_ENABLE_LEGALIZER=1
+    source /remote/Xilinx/2014.2/settings64.sh
 
     #Convey setup
     export PATH=$PATH:/opt/convey/bin
@@ -68,6 +69,8 @@ then
     fi
     export CNY_RUNTIME_STARTUP_DEBUG=0
     export CNY_CALL_STATS=1
+    #latex setup
+    export PATH=${HOME}/texlive/bin/x86_64-linux:${PATH}
 fi
 
 export USERNAME BASH_ENV PATH DISPLAY C_INCLUDE_PATH CPLUS_INCLUDE_PATH LD_LIBRARY_PATH
