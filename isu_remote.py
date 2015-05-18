@@ -125,6 +125,7 @@ serverLoadPairs.sort()
 i = 0
 
 if(len(serverLoadPairs)==0):
+    print("No servers listed, they might be down.")
     pass
 
 for pair in serverLoadPairs:
