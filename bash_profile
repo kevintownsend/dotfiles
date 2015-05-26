@@ -82,6 +82,9 @@ then
     export CNY_CALL_STATS=1
     #latex setup
     export PATH=${HOME}/texlive/bin/x86_64-linux:${PATH}
+    export PATH=/var/tmp/bin:${PATH}
+
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/var/tmp/lib
 fi
 
 export USERNAME BASH_ENV PATH DISPLAY C_INCLUDE_PATH CPLUS_INCLUDE_PATH LD_LIBRARY_PATH
