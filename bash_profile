@@ -38,12 +38,20 @@ then
   if [ -d "/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64" ]; then
     PATH="/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64:${PATH}"
   fi
+  if [ -d "/cygdrive/c/Program Files (x86)/Adobe/Reader 11.0/Reader" ]; then
+      PATH="/cygdrive/c/Program Files (x86)/Adobe/Reader 11.0/Reader:${PATH}"
+  fi
+  if [ -d "/cygdrive/c/Program Files (x86)/SumatraPDF" ]; then
+      PATH="/cygdrive/c/Program Files (x86)/SumatraPDF:${PATH}"
+  fi
   PATH="${HOME}/KT/AppData/Local/Android/sdk/tools:${HOME}/KT/AppData/Local/Android/sdk/platform-tools:${PATH}"
   ANT_HOME=${HOME}/ant/
   export ANT_HOME
-  startxwin
-  DISPLAY=localhost:0.0
+  DISPLAY=:0.0
   export DISPLAY
+  if ! xset q &>/dev/null; then
+    run xwin -multiwindow -noclipboard
+  fi
 elif [[ $(uname) =~ LINUX ]]
 then
     echo

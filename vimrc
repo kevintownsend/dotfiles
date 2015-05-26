@@ -55,3 +55,9 @@ let &t_te.="\e[0 q"
 
 "remapping esc
 inoremap qq <Esc>
+
+"increase the number of tab pages
+set tabpagemax=15
+
+"autosave
+au FocusLost * silent! wa
