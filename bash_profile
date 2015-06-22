@@ -24,6 +24,8 @@ if [ -d "${HOME}/lib" ]; then
     LD_LIBRARY_PATH="${HOME}/lib:${LD_LIBRARY_PATH}"
 fi
 
+alias l="ls -l"
+
 USERNAME=""
 PATH=".:${PATH}"
 
