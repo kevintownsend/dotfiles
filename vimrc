@@ -20,6 +20,9 @@ Plugin 'lervag/vimtex'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"vimtex
+let g:vimtex_view_method = 'sumatrapdf'
+
 "common commands to set
 set sw=4
 set et
