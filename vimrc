@@ -13,7 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'WeiChungWu/vim-SystemVerilog'
-Plugin 'Valloric/YouCompleteMe'
+"YouCompleteMe takes too long to load
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
