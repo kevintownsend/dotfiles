@@ -13,6 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'WeiChungWu/vim-SystemVerilog'
+Plugin 'kevintownsend/vim-vsim-compiler'
 "YouCompleteMe takes too long to load
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'lervag/vimtex'
@@ -20,6 +21,11 @@ Plugin 'lervag/vimtex'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+"set efm=**\ Error:\ %f(%l)%m
+"set nosmartindent
+"
+"syn sync lines=1000
 
 "vimtex
 let g:vimtex_view_method = 'sumatrapdf'
@@ -35,7 +41,7 @@ set backspace=2
 set ruler
 set mouse=a
 
-set spell
+"set spell
 
 "keep 5 lines above and below the cursor.
 set scrolloff=5

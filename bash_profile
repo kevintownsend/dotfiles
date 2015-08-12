@@ -50,7 +50,7 @@ then
   DISPLAY=:0.0
   export DISPLAY
   if ! xset q &>/dev/null; then
-    run xwin -multiwindow -noclipboard
+    run xwin -multiwindow -noclipboard -extension GLX
   fi
 elif [[ $(uname) =~ LINUX ]]
 then
