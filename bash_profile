@@ -72,9 +72,10 @@ then
     #Xilinx setup
     #The below line can effect gcc. I am not sure of the details.
     source /remote/Xilinx/14.7/settings64.sh
+    #source /remote/Xilinx/13.4/settings64.sh
     export PATH=$PATH:/remote/Modelsim/10.1c/modeltech/linux_x86_64/
     export XIL_PAR_ENABLE_LEGALIZER=1
-    source /remote/Xilinx/2014.2/settings64.sh
+    source /remote/Xilinx/2014.4/settings64.sh
 
     #Convey setup
     export PATH=$PATH:/opt/convey/bin
