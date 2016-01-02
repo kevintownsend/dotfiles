@@ -35,6 +35,12 @@ fi
 # cygwin pacific
 if [[ $(uname) =~ CYGWIN ]]
 then
+    if [ -d "/cygdrive/c/Xilinx/Vivado/2015.2/bin" ]; then
+        PATH="/cygdrive/c/Xilinx/Vivado/2015.2/bin:${PATH}"
+    fi
+    if [ -d "/cygdrive/c/Xilinx/14.7/ISE_DS/ISE/bin/nt64" ]; then
+        PATH="/cygdrive/c/Xilinx/14.7/ISE_DS/ISE/bin/nt64:${PATH}"
+    fi
   if [ -d "/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64" ]; then
     PATH="/cygdrive/c/Program Files/MiKTeX 2.9/miktex/bin/x64:${PATH}"
   fi
@@ -44,6 +50,7 @@ then
   if [ -d "/cygdrive/c/Program Files (x86)/SumatraPDF" ]; then
       PATH="/cygdrive/c/Program Files (x86)/SumatraPDF:${PATH}"
   fi
+  PATH="/usr/local/lib:${PATH}"
   PATH="${HOME}/KT/AppData/Local/Android/sdk/tools:${HOME}/KT/AppData/Local/Android/sdk/platform-tools:${PATH}"
   ANT_HOME=${HOME}/ant/
   export ANT_HOME
@@ -52,6 +59,7 @@ then
   if ! xset q &>/dev/null; then
     run xwin -multiwindow -noclipboard -extension GLX
   fi
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 elif [[ $(uname) =~ LINUX ]]
 then
     echo
