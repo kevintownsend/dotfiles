@@ -35,7 +35,7 @@ set backspace=2
 set ruler
 set mouse=a
 
-set spell
+"set spell
 
 "keep 5 lines above and below the cursor.
 set scrolloff=5
