@@ -16,7 +16,7 @@ Plugin 'WeiChungWu/vim-SystemVerilog'
 Plugin 'kevintownsend/vim-vsim-compiler'
 "YouCompleteMe takes too long to load
 "Plugin 'Valloric/YouCompleteMe'
-Plugin 'lervag/vimtex'
+"Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,6 +40,7 @@ syntax on
 set backspace=2
 set ruler
 set mouse=a
+set ttymouse=xterm2
 
 set nospell
 

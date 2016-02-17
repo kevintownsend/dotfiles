@@ -107,7 +107,7 @@ class MyHTMLParser(HTMLParser):
                         serverLoadPairs.append((load,server))
 
 try:
-    f = urlopen("http://it.engineering.iastate.edu/remote")
+    f = urlopen("http://it.engineering.iastate.edu/ece-remote-servers")
 except URLError:
     print("Unable to open it.engineering.iastate.edu. Try connecting to the internet.")
 
