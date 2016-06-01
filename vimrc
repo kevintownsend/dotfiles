@@ -102,3 +102,7 @@ set tabpagemax=15
 
 "autosave
 au FocusLost * silent! wa
+
+silent! source ~/.vimrc-g-shared-post
+silent! source ~/.vimrc-g-osx-post
+silent! source ~/.vimrc-g-goobuntu-post
