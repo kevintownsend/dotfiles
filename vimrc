@@ -14,7 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'WeiChungWu/vim-SystemVerilog'
 Plugin 'kevintownsend/vim-vsim-compiler'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 "Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
@@ -42,6 +42,9 @@ set mouse=a
 set ttymouse=xterm2
 
 set nospell
+
+"no we don't need more cow bell
+set belloff=all
 
 "keep 5 lines above and below the cursor.
 set scrolloff=5
