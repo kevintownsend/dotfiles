@@ -1,4 +1,5 @@
 #Kevin Townsend's bash_profile
+alias blaze="bazel"
 
 # Set PATH so it includes user's private bin if it exists
 if [ -d "${HOME}/bin" ] ; then
