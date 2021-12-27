@@ -34,7 +34,7 @@ set ttymouse=xterm2
 
 set nospell
 
-set mapleader=","
+let mapleader=","
 
 "no we don't need more cow bell
 set belloff=all
