@@ -2,23 +2,14 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-easy-align'
+Plug 'google/vim-maktaba'
+Plug 'bazelbuild/vim-bazel'
+Plug 'tpope/vim-fugitive'
+"Plug 'ycm-core/YouCompleteMe'
+call plug#end()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'tpope/vim-fugitive'
-Plugin 'WeiChungWu/vim-SystemVerilog'
-Plugin 'kevintownsend/vim-vsim-compiler'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'lervag/vimtex'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 "set efm=**\ Error:\ %f(%l)%m
@@ -30,9 +21,9 @@ filetype plugin indent on    " required
 let g:vimtex_view_method = 'sumatrapdf'
 
 "common commands to set
-set sw=4
+set sw=2
 set et
-set ts=4
+set ts=2
 set autoindent
 set smartindent
 syntax on
