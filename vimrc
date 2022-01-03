@@ -5,12 +5,20 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'google/vim-maktaba'
+Plug 'google/vim-glaive'
+Plug 'google/vim-codefmt'
 Plug 'bazelbuild/vim-bazel'
 Plug 'tpope/vim-fugitive'
-"Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 filetype plugin indent on    " required
+
+call glaive#Install()
+
+augroup autoformat_settings
+  autocmd FileType FileType c,cpp AutoformatBuffer clang-format
+augroup END
 
 "set efm=**\ Error:\ %f(%l)%m
 "set nosmartindent
