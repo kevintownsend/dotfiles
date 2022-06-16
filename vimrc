@@ -10,6 +10,7 @@ Plug 'google/vim-codefmt'
 Plug 'bazelbuild/vim-bazel'
 Plug 'tpope/vim-fugitive'
 Plug 'ycm-core/YouCompleteMe'
+"Plug 'tibabit/vim-templates'
 call plug#end()
 
 filetype plugin indent on    " required
@@ -24,6 +25,15 @@ augroup END
 "set nosmartindent
 "
 "syn sync lines=1000
+
+"vim-templates
+let g:tmpl_search_paths = []
+
+augroup templates
+  autocmd BufNewFile *_test.cc 0r ~/.vim/templates/test_cc.template
+  autocmd BufNewFile *\(_test\)\@<!.cc 0r ~/.vim/templates/cc.template
+  autocmd BufNewFile *.h 0r ~/.vim/templates/h.template
+augroup END
 
 "vimtex
 let g:vimtex_view_method = 'sumatrapdf'
