@@ -1,5 +1,8 @@
 #Kevin Townsend's bash_profile
+
 alias blaze="bazel"
+CC=clang
+BAZEL_CXXOPTS="-std=c++17"
 
 # Set PATH so it includes user's private bin if it exists
 if [ -d "${HOME}/bin" ] ; then
@@ -22,6 +25,10 @@ fi
 
 USERNAME=""
 PATH=".:${PATH}"
+
+if [ -d "/usr/local/texlive/2022/bin/x86_64-linux" ]; then
+  PATH="/usr/local/texlive/2022/bin/x86_64-linux:${PATH}"
+fi
 
 if [ -d "${HOME}/include" ]; then
   C_INCLUDE_PATH="${HOME}/include:${C_INCLUDE_PATH}"
@@ -93,3 +100,4 @@ then
 fi
 
 export USERNAME BASH_ENV PATH DISPLAY C_INCLUDE_PATH CPLUS_INCLUDE_PATH LD_LIBRARY_PATH
+export CC BAZEL_CXXOPTS
