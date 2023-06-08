@@ -99,5 +99,10 @@ then
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/var/tmp/lib
 fi
 
+alias ll='ls -lh'
+alias ls='ls -F'
+alias c++='clang++-12 -std=c++2b'
+alias cc='clang-12'
+
 export USERNAME BASH_ENV PATH DISPLAY C_INCLUDE_PATH CPLUS_INCLUDE_PATH LD_LIBRARY_PATH
 export CC BAZEL_CXXOPTS
