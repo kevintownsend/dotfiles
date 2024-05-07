@@ -4,7 +4,8 @@ alias blaze="bazel"
 CC=clang
 BAZEL_CXXOPTS="-std=c++17"
 
-PS1="$"
+# TODO: customize with directory info.
+PS1="> "
 
 # Set PATH so it includes user's private bin if it exists
 if [ -d "${HOME}/bin" ] ; then

@@ -9,6 +9,7 @@ Plug 'google/vim-glaive'
 Plug 'google/vim-codefmt'
 Plug 'bazelbuild/vim-bazel'
 Plug 'tpope/vim-fugitive'
+"Plug 'xaizek/clang_complete'
 Plug 'ycm-core/YouCompleteMe'
 "Plug 'tibabit/vim-templates'
 call plug#end()
@@ -28,6 +29,9 @@ augroup END
 
 "vim-templates
 let g:tmpl_search_paths = []
+
+"ycm
+let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 
 augroup templates
   autocmd BufNewFile *_test.cc 0r ~/.vim/templates/test_cc.template
