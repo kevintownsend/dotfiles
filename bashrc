@@ -5,7 +5,7 @@ CC=clang
 BAZEL_CXXOPTS="-std=c++17"
 
 # TODO: customize with directory info.
-PS1="> "
+PS1="\w>"
 
 # Set PATH so it includes user's private bin if it exists
 if [ -d "${HOME}/bin" ] ; then
