@@ -35,7 +35,8 @@ let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 
 augroup templates
   autocmd BufNewFile *_test.cc 0r ~/.vim/templates/test_cc.template
-  autocmd BufNewFile *\(_test\)\@<!.cc 0r ~/.vim/templates/cc.template
+  autocmd BufNewFile *_comp.cc 0r ~/.vim/templates/comp_cc.template
+  autocmd BufNewFile *\(_test\)|\(_comp\)\@<!.cc 0r ~/.vim/templates/cc.template
   autocmd BufNewFile *.h 0r ~/.vim/templates/h.template
 augroup END
 
