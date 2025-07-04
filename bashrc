@@ -2,7 +2,7 @@
 
 alias blaze="bazel"
 CC=clang
-BAZEL_CXXOPTS="-std=c++17"
+BAZEL_CXXOPTS="-std=c++20"
 
 # TODO: customize with directory info.
 PS1="\w>"
@@ -26,7 +26,7 @@ if [ -d "${HOME}/lib" ]; then
     LD_LIBRARY_PATH="${HOME}/lib:${LD_LIBRARY_PATH}"
 fi
 
-USERNAME=""
+USERNAME="$(whoami)"
 PATH=".:${PATH}"
 
 if [ -d "/usr/local/texlive/2022/bin/x86_64-linux" ]; then
@@ -109,3 +109,12 @@ alias cc='clang-12'
 
 export USERNAME BASH_ENV PATH DISPLAY C_INCLUDE_PATH CPLUS_INCLUDE_PATH LD_LIBRARY_PATH
 export CC BAZEL_CXXOPTS
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "${HOME}/google-cloud-sdk/path.bash.inc" ]; then . "${HOME}/google-cloud-sdk/path.bash.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "${HOME}/google-cloud-sdk/completion.bash.inc" ]; then . "${HOME}/google-cloud-sdk/completion.bash.inc"; fi
